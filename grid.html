@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" >
+    <link rel="stylesheet" type="text/css" href="css/jquery.dataTables.min.css">
+
+    
+    <title>Tickets - NeoAssist</title>
+  </head>
+  <body>
+    <table id="example" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>ID Categoria</th>
+                <th>ID Cliente</th>
+                <th>Nome</th>
+                <th>E-mail</th>
+                <th>Data Criacao</th>
+                <th>Data Atualizacao</th>
+                <th>Prioridade</th>
+                <th>Pontos</th>
+            </tr>
+        </thead>
+       
+        <tfoot>
+            <tr>
+                <th>ID</th>
+                <th>ID Categoria</th>
+                <th>ID Cliente</th>
+                <th>Nome</th>
+                <th>E-mail</th>
+                <th>Data Criacao</th>
+                <th>Data Atualizacao</th>
+                <th>Prioridade</th>
+                <th>Pontos</th>
+            </tr>
+        </tfoot>
+    </table>
+
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" charset="utf-8" class="init">
+      
+      $(document).ready(function() {
+        $('#example').DataTable({
+            "ajax": "data/tickets.txt",
+            "columns": [
+                { "data": "ID" },
+                { "data": "ID Categoria" },
+                { "data": "ID Cliente" },
+                { "data": "Nome" },
+                { "data": "E-mail" },
+                { "data": "Data Criacao" },
+                { "data": "Data Atualizacao" },
+                { "data": "Prioridade" },
+                { "data": "Pontos" }
+            ]
+        });
+      } );
+      
+
+    </script>
+
+  </body>
+</html>
